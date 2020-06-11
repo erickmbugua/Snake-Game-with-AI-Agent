@@ -13,7 +13,7 @@ This project requires the following prerequisites:
   
   -Pygame
   
-  -h5py.
+  -h5py
   
 After cloning or downloading the project change the file paths in SnakeGameAI, to the path they lie in on your computer.
 
