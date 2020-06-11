@@ -217,8 +217,6 @@ def run(agent):
     pygame.quit()
         
 if __name__=='__main__':
-    #select either snake_weights or snake_weights2
-    #snake_weights is more trained as compared to snake_weights2(1000+ games vs 200+ games)
     weights_path='SnakeGame\weights\snake_weights.hdf5'
     #set True if you want to use already trained model
     load_weights=True
