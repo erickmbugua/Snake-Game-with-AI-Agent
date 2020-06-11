@@ -8,7 +8,7 @@ import pygame
 from SnakeDQN import DQN
 from random import randint
 
-snake_body=pygame.image.load("E:\PythonProjects\SnakeGame\images\snakeBody.png")
+snake_body=pygame.image.load("SnakeGame\images\snakeBody.png")
 high_score=0
 
 class Game():
@@ -17,14 +17,14 @@ class Game():
         self.width=width
         self.height=height
         self.screen=pygame.display.set_mode((self.width,self.height+60))
-        self.bg = pygame.image.load("E:\PythonProjects\SnakeGame\images\playground.png")
+        self.bg = pygame.image.load("SnakeGame\images\playground.png")
         pygame.display.set_caption("Snake Game")
         self.clock=pygame.time.Clock()
         self.FPS=500
 class Snake(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.snake_head=pygame.image.load("E:\PythonProjects\SnakeGame\images\snakehead.png").convert()
+        self.snake_head=pygame.image.load("SnakeGame\images\snakehead.png").convert()
         self.image=pygame.transform.smoothscale(self.snake_head,(20,20))
         self.rect=self.image.get_rect()
         self.rect.topleft=[20,20]
@@ -125,7 +125,7 @@ class Snake(pygame.sprite.Sprite):
 class Food(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        self.prey=pygame.image.load("E:\PythonProjects\SnakeGame\images\sungura.png")
+        self.prey=pygame.image.load("SnakeGame\images\sungura.png")
         self.image=pygame.transform.smoothscale(self.prey,(20,20))
         self.rect=self.image.get_rect()
         self.x_rand=randint(40,380)
@@ -219,7 +219,7 @@ def run(agent):
 if __name__=='__main__':
     #select either snake_weights or snake_weights2
     #snake_weights is more trained as compared to snake_weights2
-    weights_path='E:\PythonProjects\SnakeGame\weights\snake_weights.hdf5'
+    weights_path='SnakeGame\weights\snake_weights.hdf5'
     #set True if you want to use already trained model
     load_weights=True
     #set True if you want to continue training
