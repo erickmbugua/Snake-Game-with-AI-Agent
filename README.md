@@ -5,10 +5,15 @@ A project to train the snake agent how to play using Deep Q-Learning/Deep Reinfo
 # Install
 This project requires the following prerequisites:
   -Python 3.6(unless Tensorflow is supported on higher versions)
+  
   -Tensorflow
+  
   -Keras
+  
   -Pygame
-  -h5py
+  
+  -h5py.
+  
 After cloning or downloading the project change the file paths in SnakeGameAI, to the path they lie in on your computer.
 The file paths are on line 11,20,27,128 and 222.
 # Running
