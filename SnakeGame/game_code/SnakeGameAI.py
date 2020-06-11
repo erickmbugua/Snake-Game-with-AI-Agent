@@ -31,7 +31,7 @@ class Snake(pygame.sprite.Sprite):
         self.game_crash=False
         self.body_size=0
         self.trail_arr=[]
-        self.x_change=0
+        self.x_change=20
         self.y_change=0
         self.eaten=False
     def update_position(self,action):
@@ -189,8 +189,8 @@ def run(agent):
         all_sprites=pygame.sprite.Group()
         all_sprites.add(snake)
         all_sprites.add(food)
-        draw_sprites(all_sprites,food,snake,game)
         game.clock.tick(game.FPS)
+        draw_sprites(all_sprites,food,snake,game)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running=False
@@ -218,12 +218,12 @@ def run(agent):
         
 if __name__=='__main__':
     #select either snake_weights or snake_weights2
-    #snake_weights is more trained as compared to snake_weights2
+    #snake_weights is more trained as compared to snake_weights2(1000+ games vs 200+ games)
     weights_path='SnakeGame\weights\snake_weights.hdf5'
     #set True if you want to use already trained model
     load_weights=True
     #set True if you want to continue training
-    train=True
+    train=False
     agent=DQN(5,16,load_weights,weights_path,train)
     if load_weights:
         print("Weights Loaded")
